@@ -148,18 +148,6 @@ namespace UMotionEditor
             }
         }
 
-		public static bool SkeletonBoneParentImplemented
-        {
-            get
-            {
-                #if UNITY_5_5_OR_NEWER
-                return true;
-                #else
-                return false;
-                #endif
-            }
-        }
-
         public static ReadOnlyCollection<HumanBodyBones> RequiredHumanoidBones
         {
             get

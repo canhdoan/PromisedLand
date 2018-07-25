@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="versionHeader">
-			<p class="versionText">Version: <b>1.10p01</b> </p>
+			<p class="versionText">Version: <b>1.13p01</b> </p>
 		</div>
 		<div class="leftContent">
 			<div class="leftContentInner">
@@ -40,6 +40,8 @@
 <li>
 	<label for="GeneralTutorials"><a href="GeneralTutorials.html" class="treeFolderLink">General</a></label> <input type="checkbox"  id="GeneralTutorials" /> 
 	<ol>
+<li class="file"><a href="QuickStart.html">Quick Start Tutorial</a></li>
+
 <li class="file"><a href="Lesson1.html">1) Installation & First Steps</a></li>
 
 <li class="file"><a href="Lesson2.html">2) Pose Editing</a></li>
@@ -61,7 +63,7 @@
 </li>
 
 <li>
-	<label for="ProfessionalExclusive"><a href="ProfessionalExclusive.html" class="treeFolderLink">Professional Exclusive</a></label> <input type="checkbox"  id="ProfessionalExclusive" /> 
+	<label for="ProfessionalExclusive"><a href="ProfessionalExclusive.html" class="treeFolderLink">UMotion Pro</a></label> <input type="checkbox"  id="ProfessionalExclusive" /> 
 	<ol>
 <li class="file"><a href="ProLesson1.html">1) Importing Animations</a></li>
 
@@ -81,6 +83,13 @@
 <li class="file"><a href="InPractice1.html">1) Our First Animation</a></li>
 
 <li class="file"><a href="InPractice2.html">2) Editing Animations</a></li>
+</ol>
+</li>
+
+<li>
+	<label for="Jayanam"><a href="Jayanam.html" class="treeFolderLink">Jayanam</a></label> <input type="checkbox"  id="Jayanam" /> 
+	<ol>
+<li class="file"><a href="Jayanam1.html">UMotion Tutorial</a></li>
 </ol>
 </li>
 </ol>
@@ -232,7 +241,123 @@
         </br>
         </br>The beta version is incremented with every change related to the current beta generation (includes bug fixes, new features or changes to the manual). Beta versions are watermarked as "beta" in the Clip Editor and are not available via the Asset Store.</td>
     </tr>
-</table></br></br><h2 class="headline2" id="">UMotion V1.10p01</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+</table></br></br><h2 class="headline2" id="">UMotion V1.13p01</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed GUID conflicts.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><p class="textBlock">None</p></br></br><h2 class="headline2" id="">UMotion V1.13</h2><h3 class="headline3" id="">New or Changed Features</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">The *.fbx file scale can now be defined in the export settings.</span></li>
+    <li class="listItem"><span class="listText">Export to FBX is now also supported on Mac OSX.</span></li>
+    <li class="listItem"><span class="listText">The dopesheet context menu now also displays the "Add keys To All Properties" item when a master key or an animation event was clicked.</span></li>
+    <li class="listItem"><span class="listText">The context menu that is used to switch between animation clips is now sorted alphabetically.</span></li>
+</ul><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when the About Dialog is opened.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when exporting a *.fbx animation and the defined export directory does not exist.</span></li>
+    <li class="listItem"><span class="listText">Fixed that the total *.fbx file grows with each export when updating an existing *.fbx file.</span></li>
+    <li class="listItem"><span class="listText">Fixed that the framerate isn't correctly exported when exporting as *.fbx.</span></li>
+    <li class="listItem"><span class="listText">Fixed that root motion isn't previewed correctly when the animated character is scaled.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that can occur under specific circumstances when clicking on the "Calibrate Character Front" button in the IK setup wizard.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that can occur under specific circumstances when creating a humanoid IK rig using the IK setup wizard.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when exporting a clip that has a custom property in "component property" mode with no GameObject assigned.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when pressing <span class="keyboardKey">CTRL</span> + <span class="keyboardKey">D</span> while dragging keys in the Clip Editor.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Added a description of the "File Scale" property in the "Clip Editor / Main Navigation / Project Settings" chapter.</span></li>
+    <li class="listItem"><span class="listText">Updated the "Import/Export" chapter based on the latest changes.</span></li>
+</ul></br></br><h2 class="headline2" id="">UMotion V1.12p03</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when opening a umotion project that has keys at frames below 0.</span></li>
+    <li class="listItem"><span class="listText">Installed a workaround for a bug in Unity 2018.2 that causes most GUI labels to be displayed incorrectly.</span></li>
+    <li class="listItem"><span class="listText">Installed a workaround for a bug in Unity 2018.2 that causes the colliders of the bones not to update.</span></li>
+    <li class="listItem"><span class="listText">Fixed a few exceptions that are thrown under very specific circumstances by the GUI system.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><p class="textBlock">None</p></br></br><h2 class="headline2" id="">UMotion V1.12p02</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed that when the Child-Of Parent (or IK Pinning) property is changed, existing keys are not updated correctly.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown in various scenarios when using a Child-Of (IK Pinning) constraint.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown in some specific scenarios when creating keys via the key selected dialog.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that can occur on Mac OS when the Clip Editor window is opened.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that can be thrown under specific circumstances when a project is closed.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that can be thrown under specific circumstances when a project is imported.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><p class="textBlock">None</p></br></br><h2 class="headline2" id="">UMotion V1.12p01</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when deleting two animation clips in sequence while the curves view is visible.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when undoing the creation of a new project (when another project was previously opened).</span></li>
+    <li class="listItem"><span class="listText">Undoing/redoing switching between UMotion projects is not supported anymore as there a various cornern cases that can cause exceptions.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Added a video tutorial chapter for tutorials created by the Youtuber "Jayanam".</span></li>
+</ul></br></br><h2 class="headline2" id="">UMotion V1.12</h2><h3 class="headline3" id="">New or Changed Features</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">The core architecture was reworked in order to gain major performance improvements (especially when editing large animation clips).</span></li>
+    <li class="listItem"><span class="listText">Support for Unity 5.4 is deprecated. Please use Unity 5.5 or higher or keep using UMotion V1.11p02.</span></li>
+    <li class="listItem"><span class="listText">The "&lt;unity-project&gt;/UMotionAutoBackups" folder was moved to "&lt;unity-project&gt;/UMotionData/AutoBackups".</span></li>
+</ul><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed an exceptions that is thrown on Mac OS when a UMotion dialog window is opened.</span></li>
+    <li class="listItem"><span class="listText">Fixed that "File Format Changed" dialog is not shown when UMotion automatically openes the last used project.</span></li>
+    <li class="listItem"><span class="listText">Fixed that "File Format Changed" dialog is not shown when opening a project via the "Recently Opened Projects" menu item.</span></li>
+    <li class="listItem"><span class="listText">Fixed error messages that appear in the Unity Console regarding an invalid scale being assigned.</span></li>
+    <li class="listItem"><span class="listText">Fixed an endless loop when opening the curves view when the whole animation only has keys at the first frame.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Removed the description of known issue related to Unity versions that aren't supported anymore.</span></li>
+</ul></br></br><h2 class="headline2" id="">UMotion V1.11p02</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed that all tangents instead of only the selected ones are inverted when applying a negative scale with the box tool.</span></li>
+    <li class="listItem"><span class="listText">Fixed that free tangents aren't inverted correctly by the box tool.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown clicking on an animated property using <span class="keyboardKey">ALT</span> + <span class="keyboardKey">Left Mouse Button</span> and no GameObject is assigned to the Pose Editor.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when a GameObject that is currently locked by UMotion is duplicated (by duplicating a parent transform of it) as soon as "Clear" is pressed in the Pose Editor.</span></li>
+    <li class="listItem"><span class="listText">Fixed a potential exception that can occure when dragging keys over existing keys.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when exporting in "Update existing FBX mode" and the FBX file that should be updated has been deleted.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when exporting an animation clip and a constraint dependency loop is detected.</span></li>
+    <li class="listItem"><span class="listText">Fixed various exceptions that appear when bones in an IK chain do not exist in the current animated GameObject.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><p class="textBlock">None</p></br></br><h2 class="headline2" id="">UMotion V1.11p01</h2><h3 class="headline3" id="">New or Changed Features</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">The "Quick Start Tutorial" is now shown in the welcome screen.</span></li>
+</ul><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed that tangent properties aren't inverted when keys are inverted using the box tool.</span></li>
+    <li class="listItem"><span class="listText">Ignoring an exception that is caused by a Unity bug in 2018.2.0 when AssetDatabase.Refresh() is called.</span></li>
+    <li class="listItem"><span class="listText">Fixed a null reference exception that appears under specific circumstances when editing an animation clip of a Unity Timeline sequence.</span></li>
+    <li class="listItem"><span class="listText">Fixed a null reference exception that appears under specific circumstances when using the IK Setup Wizard.</span></li>
+    <li class="listItem"><span class="listText">Fixed that the rotation tool assistant window width is too small in some specific situtations.</span></li>
+    <li class="listItem"><span class="listText">Fixed that the clip name of an animation clip that is exported for the first time isn't displayed in the title of the export progress bar dialog.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Added a "Quick Start Tutorial" to the Video Tutorials chapter.</span></li>
+</ul></br></br><h2 class="headline2" id="">UMotion V1.11</h2><h3 class="headline3" id="">New or Changed Features</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Added FBX export functionality.</span></li>
+    <li class="listItem"><span class="listText">Added export settings to the project settings window. The export settings can also be reached via "File / Export / Export Settings".</span></li>
+    <li class="listItem"><span class="listText">Added Autodesk® FBX® copyright notice to "About" window.</span></li>
+    <li class="listItem"><span class="listText">Reduced the time consumed for exporting a humanoid animation that uses IK by 50%.</span></li>
+    <li class="listItem"><span class="listText">The export process now displays progress bars.</span></li>
+    <li class="listItem"><span class="listText">The "Unapplied Modifications" dialog displayed when switching from Config Mode to Pose Mode now offers an option to directly save the referenc pose.</span></li>
+    <li class="listItem"><span class="listText">Improved the Curves View: Curves now correctly preview how they behave after the clips last frame (loop, root motion).</span></li>
+    <li class="listItem"><span class="listText">Added box editing tool to the Clip Editor: Provides easy scaling of keys and events.</span></li>
+    <li class="listItem"><span class="listText">Added "ripple" mode when dragging or scaling keys/events (activated by holding <span class="keyboardKey">R</span>).</span></li>
+    <li class="listItem"><span class="listText">Improved the Rotation Tool Assistant.</span></li>
+</ul><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when pressing the "Focus Camera" shortcut in some specific scenarios.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when all IK chain members are masked and the IK target's visibility is set to "locked".</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown in Pose Mode when all IK chain members of an IK constraint are masked.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Added Autodesk® FBX® copyright notice to "Credits" chapter.</span></li>
+    <li class="listItem"><span class="listText">Added Eigen copyright notice to "Credits" chapter.</span></li>
+    <li class="listItem"><span class="listText">Updated "Clip Editor / Main Navigation / Project Settings" chapter based on latest implementation changes.</span></li>
+    <li class="listItem"><span class="listText">Updated "Clip Editor / Import/Export" chapter based on latest implementation changes.</span></li>
+    <li class="listItem"><span class="listText">Updated "Pose Editor / Tool Assistant" chapter based on latest implementation changes.</span></li>
+</ul></br></br><h2 class="headline2" id="">UMotion V1.10p04</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when importing an *.anim file that has key frames with invalid tangent modes.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown under very specific conditions when assigning a humanoid GameObject to the Pose Editor.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown under very specific conditions when pressing <span class="keyboardKey">Tab</span> (= switch edit mode shortcut) when no preview object is selected in the Pose Editor.</span></li>
+    <li class="listItem"><span class="listText">Improved exception handling so that other assets that throw exceptions in events like OnProjectChange() don't break UMotion's functionality.</span></li>
+    <li class="listItem"><span class="listText">Fixed exceptions that are thrown when AssetDatabase methods issue a nested OnGUI call.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><p class="textBlock">None</p></br></br><h2 class="headline2" id="">UMotion V1.10p03</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when clicking on "Window --> UMotion Editor --> Manual" when the Clip Editor is not opened.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when clicking on "Window --> UMotion Editor --> Video Tutorials" when the Clip Editor is not opened.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown by the rotation tool assistant under very specific circumstances.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when undo is performed after the UMotion project file was deleted.</span></li>
+    <li class="listItem"><span class="listText">Fixed that UMotion windows are closed when restarting UMotion (regression V1.10p02).</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown undoing the deletion of a Custom Property constraint, changing the mode then delete the Custom Property constraint again.</span></li>
+    <li class="listItem"><span class="listText">Fixed that undoing the deletion of a Custom Property Constraint, the error dialog "Empty name not allowed" is displayed every time the mode is changed.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when vertex weight visualization is enabled on meshes that have no boneWeights defined.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><p class="textBlock">None</p></br></br><h2 class="headline2" id="">UMotion V1.10p02</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown under very specific circumstances when pasting in the Clip Editor.</span></li>
+    <li class="listItem"><span class="listText">Fixed a "ReflectionTypeLoadException" that is thrown under specific circumstances.</span></li>
+    <li class="listItem"><span class="listText">Fixed compatibility with Unity Timeline in Unity 2018.2 (beta).</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown under very specific circumstances when opening the Clip Editor for the first time.</span></li>
+    <li class="listItem"><span class="listText">Added a error message box instead of some undefined behaviour when assigning a child or a parent GameObject of the GameObject already locked by UMotion to the Pose Editor.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when assigning a GameObject with HideFlags.DontSave set.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when deleting the UMotion installation while a UMotion project (that is also deleted) is loaded in the Clip Editor.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown when vertex weight visualization is enabled on a GameObject that has a SkinnedMeshRenderer with no bones.</span></li>
+    <li class="listItem"><span class="listText">Fixed an exception that is thrown by the IK Setup Wizard when a bone is selected as target that doesn't exist in the current animated GameObject.</span></li>
+</ul><h3 class="headline3" id="">Manual Changes</h3><p class="textBlock">None</p></br></br><h2 class="headline2" id="">UMotion V1.10p01</h2><h3 class="headline3" id="">New or Changed Features</h3><p class="textBlock">None</p><h3 class="headline3" id="">Bug Fixes</h3><ul class="listMain">
     <li class="listItem"><span class="listText">Fixed that the legacy GameObject "UMotion_EditorStatesSceneHelper" is only removed when UMotion is instantiated but not when a scene is opened.</span></li>
 </ul><h3 class="headline3" id="">Manual Changes</h3><p class="textBlock">None</p></br></br><h2 class="headline2" id="">UMotion V1.10</h2><h3 class="headline3" id="">New or Changed Features</h3><ul class="listMain">
     <li class="listItem"><span class="listText">Added a backup system that automatically creates backups of the opened UMotion project (enabled by default).</span></li>

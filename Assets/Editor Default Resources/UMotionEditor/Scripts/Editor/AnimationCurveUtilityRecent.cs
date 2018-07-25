@@ -11,18 +11,6 @@ namespace UMotionEditor
 		// Public Properties
 		//********************************************************************************
 
-        public static bool Implemented
-        {
-            get
-            {
-                #if UNITY_5_5_OR_NEWER
-                return true;
-                #else
-                return false;
-                #endif
-            }
-        }
-
         public static bool WeightedTangentsImplemented
         {
             get
@@ -55,27 +43,6 @@ namespace UMotionEditor
 		//********************************************************************************
 		// Public Methods
 		//********************************************************************************
-		
-        public static void SetKeyBroken(AnimationCurve curve, int index, bool broken)
-        {
-            #if UNITY_5_5_OR_NEWER
-            AnimationUtility.SetKeyBroken(curve, index, broken);
-            #endif
-        }
-
-        public static void SetKeyLeftTangentMode(AnimationCurve curve, int index, int tangentMode)
-        {
-            #if UNITY_5_5_OR_NEWER
-            AnimationUtility.SetKeyLeftTangentMode(curve, index, (AnimationUtility.TangentMode)tangentMode);
-            #endif
-        }
-
-        public static void SetKeyRightTangentMode(AnimationCurve curve, int index, int tangentMode)
-        {
-            #if UNITY_5_5_OR_NEWER
-            AnimationUtility.SetKeyRightTangentMode(curve, index, (AnimationUtility.TangentMode)tangentMode);
-            #endif
-        }
 
         public static bool GetKeyBroken(AnimationCurve curve, int index)
         {
@@ -91,31 +58,31 @@ namespace UMotionEditor
             #endif
         }
 
-        public static int GetKeyLeftTangentMode(AnimationCurve curve, int index)
+        public static AnimationUtility.TangentMode GetKeyLeftTangentMode(AnimationCurve curve, int index)
         {
             #if UNITY_2017_1_OR_NEWER
-            return (int)AnimationUtility.GetKeyLeftTangentMode(curve, index);
+            return AnimationUtility.GetKeyLeftTangentMode(curve, index);
             #else
             if (getKeyLeftTangentModeMethodInfo == null)
             {
                 getKeyLeftTangentModeMethodInfo = typeof(AnimationUtility).GetMethod("GetKeyLeftTangentMode", BindingFlags.NonPublic | BindingFlags.Static);
             }
 
-            return (int)getKeyLeftTangentModeMethodInfo.Invoke(null, new object[] { curve[index] });
+            return (AnimationUtility.TangentMode)getKeyLeftTangentModeMethodInfo.Invoke(null, new object[] { curve[index] });
             #endif
         }
 
-        public static int GetKeyRightTangentMode(AnimationCurve curve, int index)
+        public static AnimationUtility.TangentMode GetKeyRightTangentMode(AnimationCurve curve, int index)
         {
             #if UNITY_2017_1_OR_NEWER
-            return (int)AnimationUtility.GetKeyLeftTangentMode(curve, index);
+            return AnimationUtility.GetKeyLeftTangentMode(curve, index);
             #else
             if (getKeyRightTangentModeMethodInfo == null)
             {
                 getKeyRightTangentModeMethodInfo = typeof(AnimationUtility).GetMethod("GetKeyRightTangentMode", BindingFlags.NonPublic | BindingFlags.Static);
             }
 
-            return (int)getKeyRightTangentModeMethodInfo.Invoke(null, new object[] { curve[index] });
+            return (AnimationUtility.TangentMode)getKeyRightTangentModeMethodInfo.Invoke(null, new object[] { curve[index] });
             #endif
         }
 
@@ -167,19 +134,14 @@ namespace UMotionEditor
             #endif
         }
 
-        public static void SetLegacyTangentMode(ref Keyframe key, int tangentMode)
+        public static void InitializeKeyframe(int frame, float value, float inTangent, float outTangent,  int weightedMode, float leftWeight, float rightWeight, out Keyframe key)
         {
-            #if !UNITY_5_5_OR_NEWER
-            key.tangentMode = tangentMode;
-            #endif
-        }
+            key = new Keyframe(frame, value, inTangent, outTangent);
 
-        public static int GetLegacyTangentMode(Keyframe key)
-        {
-            #if UNITY_5_5_OR_NEWER
-            return 0;
-            #else
-            return key.tangentMode;
+            #if UNITY_2018_1_OR_NEWER
+            key.weightedMode = (WeightedMode)weightedMode;
+            key.inWeight = leftWeight;
+            key.outWeight = rightWeight;
             #endif
         }
 

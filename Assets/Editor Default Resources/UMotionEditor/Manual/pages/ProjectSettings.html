@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="versionHeader">
-			<p class="versionText">Version: <b>1.10p01</b> </p>
+			<p class="versionText">Version: <b>1.13p01</b> </p>
 		</div>
 		<div class="leftContent">
 			<div class="leftContentInner">
@@ -40,6 +40,8 @@
 <li>
 	<label for="GeneralTutorials"><a href="GeneralTutorials.html" class="treeFolderLink">General</a></label> <input type="checkbox"  id="GeneralTutorials" /> 
 	<ol>
+<li class="file"><a href="QuickStart.html">Quick Start Tutorial</a></li>
+
 <li class="file"><a href="Lesson1.html">1) Installation & First Steps</a></li>
 
 <li class="file"><a href="Lesson2.html">2) Pose Editing</a></li>
@@ -61,7 +63,7 @@
 </li>
 
 <li>
-	<label for="ProfessionalExclusive"><a href="ProfessionalExclusive.html" class="treeFolderLink">Professional Exclusive</a></label> <input type="checkbox"  id="ProfessionalExclusive" /> 
+	<label for="ProfessionalExclusive"><a href="ProfessionalExclusive.html" class="treeFolderLink">UMotion Pro</a></label> <input type="checkbox"  id="ProfessionalExclusive" /> 
 	<ol>
 <li class="file"><a href="ProLesson1.html">1) Importing Animations</a></li>
 
@@ -81,6 +83,13 @@
 <li class="file"><a href="InPractice1.html">1) Our First Animation</a></li>
 
 <li class="file"><a href="InPractice2.html">2) Editing Animations</a></li>
+</ol>
+</li>
+
+<li>
+	<label for="Jayanam"><a href="Jayanam.html" class="treeFolderLink">Jayanam</a></label> <input type="checkbox"  id="Jayanam" /> 
+	<ol>
+<li class="file"><a href="Jayanam1.html">UMotion Tutorial</a></li>
 </ol>
 </li>
 </ol>
@@ -209,7 +218,7 @@
 		<div class="mainContent">
 			<div class="mainContentInner">
 				<h1 class="headline1" id="">Project Settings</h1><img src="../images/ProjectSettings.png" class="image"></img>
-<p class="imageText">Project Settings Window</p><table class="themeTable">
+<p class="imageText">Project Settings Window</p><h2 class="headline2" id="">Project Settings</h2><table class="themeTable">
     <tr class="themeTableRow">
         <th class="themeTableHeader">UI Element</th>
         <th class="themeTableHeader">Description</th>
@@ -226,9 +235,79 @@
         <td class="themeTableCell" style="white-space: nowrap;">Chain Neighbour Keys</td>
         <td class="themeTableCell">When this option is enabled, the keys on the same frame of every channel in a property are linked (default: enabled). This ensures that each channel in e.g. the position property (x, y and z) has a key at the same frame.</td>
     </tr>
+</table><h2 class="headline2" id="ExportSettings">Export Settings</h2><p class="textBlock">These settings are used by the <a href="ImportExport.html" class="link">Clip Export Process</a>.</p><table class="themeTable">
     <tr class="themeTableRow">
-        <td class="themeTableCell" style="white-space: nowrap;">Export Directory</td>
-        <td class="themeTableCell">Specifies the directory, where the clips should be exported to.</td>
+        <th class="themeTableHeader">UI Element</th>
+        <th class="themeTableHeader">Description</th>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">File Format</td>
+        <td class="themeTableCell">
+            <ul class="listMain">
+                <li class="listItem"><span class="listText"><b>Anim:</b> Exports animation clips in Unity's proprietary *.anim file format.</span></li>
+                <li class="listItem"><span class="listText"><b>Fbx Binary:</b> Exports animation clips as binary *.fbx files.</span></li>
+                <li class="listItem"><span class="listText"><b>Fbx ASCII:</b> Exports animation clips as text (ASCII) *.fbx files. Text *.fbx files consume more disk space than binary files.</span></li>
+            </ul>
+            For FBX files it is also possible to select the file version. The default file version (2011) is tested to be compatible with most common 3D software.
+            </br>
+            </br>Please note that Blender does not support FBX files in ASCII format.
+        </td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">Write Mode</td>
+        <td class="themeTableCell">
+            <ul class="listMain">
+                <li class="listItem"><span class="listText"><b>Export As New File:</b> The export operation creates a new file and overwrites an existing file.</span></li>
+                <li class="listItem"><span class="listText"><b>Update Existing File:</b> Exports animation clips into an existing file. Existing animation clips (takes) with a same name are overwritten. This is useful for attaching animations to an existing 3D model. Converts the existing file into the *.fbx format defined above.</span></li>
+            </ul>
+        </td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">Clip Treatment</td>
+        <td class="themeTableCell">
+            <ul class="listMain">
+                <li class="listItem"><span class="listText"><b>One Clip Per File:</b> Exports every animation clip of the UMotion project as separate file. The name of the file is the name the clip has in the UMotion project.</span></li>
+                <li class="listItem"><span class="listText"><b>All Clips In One File:</b> Exports all animation clips of the UMotion project into one file. Please note that the frame rate is defined globally in a *.fbx files. That means that all animaion clips in one *.fbx file have the same framerate. If the exported clips have different framerates, the framerate of the first exported clip defines the global framerate of the *.fbx file.</span></li>
+            </ul>
+        </td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">Keyframe Reduction</td>
+        <td class="themeTableCell">
+            <ul class="listMain">
+                <li class="listItem"><span class="listText"><b>Lossless:</b> Removes only redundant keys.</span></li>
+                <li class="listItem"><span class="listText"><b>Lossy (Fbx only):</b> Tries to reduce the Fbx file size by applying a key reduction strategy that tolerates a specified amount of error. This can greatly reduce the Fbx file size. Please note that usually the Fbx file size does not directly influence the size of a built game as Unity resamples the animation clips on import (i.e. for humanoid animations or if "Resample Curves" is enabled).</span></li>
+            </ul>
+        </td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">Position Error</td>
+        <td class="themeTableCell">Tolerated error threshold for position curves in generic units.</td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">Rotation Error</td>
+        <td class="themeTableCell">Tolerated error threshold for rotation curves in generic units.</td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">Scale Error</td>
+        <td class="themeTableCell">Tolerated error threshold for scale curves in generic units.</td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">File Scale</td>
+        <td class="themeTableCell">This scale is applied to *.fbx files when exporting. The default file scale is 0.01 to convert from Unity which uses meters to centimeters (usually used in *.fbx files). When the exported animation should be used on the Unity Asset Store, a file scale of 1 should be used.</td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">Rotation Offset</td>
+        <td class="themeTableCell">Select a bone/transform that should get a rotation offset applied in the exported file. This is useful if the exported animation isn't rotated correctly.</td>
+    </tr>
+    <tr class="themeTableRow">
+        <td class="themeTableCell" style="white-space: nowrap;">Destination Folder/File</td>
+        <td class="themeTableCell">
+            <ul class="listMain">
+                <li class="listItem"><span class="listText">When exporting <b>One Clip Per File</b>: Defines a directory where to export all animation clips as separate files.</span></li>
+                <li class="listItem"><span class="listText">When exporting <b>All Clips In One File</b>: Defines the file in which all animation clips should be exported to.</span></li>
+            </ul>
+        </td>
     </tr>
 </table>
 				<div class="mainContentFooter">

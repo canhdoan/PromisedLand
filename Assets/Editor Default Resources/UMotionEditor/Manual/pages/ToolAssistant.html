@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="versionHeader">
-			<p class="versionText">Version: <b>1.10p01</b> </p>
+			<p class="versionText">Version: <b>1.13p01</b> </p>
 		</div>
 		<div class="leftContent">
 			<div class="leftContentInner">
@@ -40,6 +40,8 @@
 <li>
 	<label for="GeneralTutorials"><a href="GeneralTutorials.html" class="treeFolderLink">General</a></label> <input type="checkbox"  id="GeneralTutorials" /> 
 	<ol>
+<li class="file"><a href="QuickStart.html">Quick Start Tutorial</a></li>
+
 <li class="file"><a href="Lesson1.html">1) Installation & First Steps</a></li>
 
 <li class="file"><a href="Lesson2.html">2) Pose Editing</a></li>
@@ -61,7 +63,7 @@
 </li>
 
 <li>
-	<label for="ProfessionalExclusive"><a href="ProfessionalExclusive.html" class="treeFolderLink">Professional Exclusive</a></label> <input type="checkbox"  id="ProfessionalExclusive" /> 
+	<label for="ProfessionalExclusive"><a href="ProfessionalExclusive.html" class="treeFolderLink">UMotion Pro</a></label> <input type="checkbox"  id="ProfessionalExclusive" /> 
 	<ol>
 <li class="file"><a href="ProLesson1.html">1) Importing Animations</a></li>
 
@@ -81,6 +83,13 @@
 <li class="file"><a href="InPractice1.html">1) Our First Animation</a></li>
 
 <li class="file"><a href="InPractice2.html">2) Editing Animations</a></li>
+</ol>
+</li>
+
+<li>
+	<label for="Jayanam"><a href="Jayanam.html" class="treeFolderLink">Jayanam</a></label> <input type="checkbox"  id="Jayanam" /> 
+	<ol>
+<li class="file"><a href="Jayanam1.html">UMotion Tutorial</a></li>
 </ol>
 </li>
 </ol>
@@ -229,15 +238,17 @@
     <li class="listItem"><span class="listText">The input fields can be used to edit the position values of each axis.</span></li>
     <li class="listItem"><span class="listText">When left clicking and dragging on the label next to the input field, it is possible to smoothly adjust the value. <span class="keyboardKey">ESCAPE</span> aborts the dragging and reverts changes to the original value.</span></li>
     <li class="listItem"><span class="listText">The check boxes on the right can be used to lock an axis. This will disable the handle for that axis in the Scene View and makes the input field read only.</span></li>
-</ul><h2 class="headline2" id="">Rotate Tool Assistant</h2><p class="textBlock">The Rotate Tool Assistant displays the current local or global rotation of the selected bone/transform depending on the current Pivot mode. The rotation is always displayed in Euler angles even when the rotation mode is quaternion based.</p><img src="../images/RotateToolAssistant.png" class="image"></img>
-<p class="imageText">Rotate Tool Assistant</p><h3 class="headline3" id="">Features</h3><ul class="listMain">
-    <li class="listItem"><span class="listText">The input fields can be used to edit the rotation values of each axis.</span></li>
-    <li class="listItem"><span class="listText">The sliders next to the input fields can be used to smoothly adjust the rotation value of each axis. As with all sliders in the UMotion UI <span class="keyboardKey">ESCAPE</span> aborts the dragging and reverts changes to the original value.</span></li>
+</ul><h2 class="headline2" id="">Rotate Tool Assistant</h2><p class="textBlock">The Rotate Tool Assistant displays the current local or global rotation of the selected bone/transform depending on the current Pivot mode. The rotation is always displayed in Euler angles even when the rotation mode is quaternion based.</p><table class="containerTable"><tr class="containerTableRow">
+    <td class="containerTableCell"><img src="../images/RotateToolAssistantAbsolute.png" class="image"></img>
+<p class="imageText">Rotate Tool Assistant - Absolute</p></td>
+    <td class="containerTableCell"><img src="../images/RotateToolAssistantRelative.png" class="image"></img>
+<p class="imageText">Rotate Tool Assistant - Relative</p></td>
+</tr></table><h3 class="headline3" id="">Relative Mode</h3><p class="textBlock">Makes it easy to rotate a bone/transform relative to it's current rotation. Correctly rotates the bone/transform even if it's in a Gimbal Lock. The sliders next to the input fields can be used to smoothly adjust the rotation value of each axis. As with all sliders in the UMotion UI <span class="keyboardKey">ESCAPE</span> aborts the dragging and reverts changes to the original value.</p><h3 class="headline3" id="">Absolute Mode</h3><p class="textBlock">Can be used to set the selected bone's/transform's rotation to a desired euler angle. After inputing the euler angles, it is required to hit the "Apply" button.</p><p class="textBlock">It's worth noting that after applying a rotation, it can happen that all 3 values update and show different values. This can happen if the passed euler angle resulted in a Gimbal Lock. The new values result in the exact same orientation in 3D space.</p><p class="textBlock">If the selected bone's rotation property is using the euler interpolation mode, the euler values should be directly changed via the Channels View.</p><h3 class="headline3" id="">Other Features</h3><ul class="listMain">
     <li class="listItem"><span class="listText">The check boxes on the right can be used to lock an axis. This will disable the handle for that axis in the Scene View and makes the input field read only.</span></li>
     <li class="listItem"><span class="listText">The <b>Camera Rotation Handle</b> can be enabled or disabled. It is the outer white ring of the rotation handle and can be used to perform a rotation in the current camera space.</span></li>
     <li class="listItem"><span class="listText">The <b>Free Rotation Handle</b> can be enabled or disabled. It is the inner white ring of the rotation handle and can be used to freely rotate in all directions.</span></li>
     <li class="listItem"><span class="listText">The <b>Backside Culling</b> can be enabled or disabled. When enabled, the backside of the rotation handles of the rotation axis (red, green and blue) are culled.</span></li>
-</ul><p class="textBlock">It's worth noting that when a rotation value is edited, it can happen that all 3 values update and suddenly show different values. This is due to the fact that the change is applied as quaternion internally to avoid Gimbal Lock effects. The displayed values are then converted back to Euler angles which can result in different values but result in the same orientation in 3D space.</p><h2 class="headline2" id="">Scale Tool Assistant</h2><p class="textBlock">The Scale Tool Assistant displays the current local scale of the selected bone/transform.</p><img src="../images/ScaleToolAssistant.png" class="image"></img>
+</ul><h2 class="headline2" id="">Scale Tool Assistant</h2><p class="textBlock">The Scale Tool Assistant displays the current local scale of the selected bone/transform.</p><img src="../images/ScaleToolAssistant.png" class="image"></img>
 <p class="imageText">Scale Tool Assistant</p><h3 class="headline3" id="">Features</h3><ul class="listMain">
     <li class="listItem"><span class="listText">The input fields can be used to edit the scale values of each axis.</span></li>
     <li class="listItem"><span class="listText">When left clicking and dragging on the label next to the input field, it is possible to smoothly adjust the value. <span class="keyboardKey">ESCAPE</span> aborts the dragging and reverts changes to the original value.</span></li>

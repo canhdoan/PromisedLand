@@ -124,6 +124,7 @@ namespace Opsive.ThirdPersonController
             var rigidbody = m_Base.AddComponent<Rigidbody>();
             rigidbody.useGravity = false;
             rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            rigidbody.isKinematic = true;
 
             var itemTransform = m_Base.transform;
             var shootableWeapon = m_Base.AddComponent<Opsive.ThirdPersonController.Wrappers.ShootableWeapon>();
